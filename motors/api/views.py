@@ -1,10 +1,10 @@
-from motors.models import Motor
+from motors.models import Motors
 from motors.api.serializer import MotorSerializer
 from rest_framework import serializers
 
 class MotorViewSet(serializers.ModelSerializer):
-    query = Motor.objects.all()
     serializer_class = MotorSerializer
+    query = Motors.objects.all()
 
     def get_queryset(self):
         return self.query

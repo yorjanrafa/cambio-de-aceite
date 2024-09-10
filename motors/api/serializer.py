@@ -1,6 +1,6 @@
 from rest_framework import serializers
 
-from .models import Motors
+from motors.models import Motors
 
 class MotorSerializer(serializers.ModelSerializer):
     class Meta:
